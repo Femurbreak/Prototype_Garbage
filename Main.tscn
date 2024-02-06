@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpjkp2tv1wb5e"]
+[gd_scene load_steps=3 format=3 uid="uid://dpjkp2tv1wb5e"]
 
 [ext_resource type="Texture2D" uid="uid://c6tgio38d1n4c" path="res://Sprites/Garbage Bag Sprite.png" id="1_bpp3e"]
+[ext_resource type="PackedScene" uid="uid://ble5oel4vhttm" path="res://Scenes/garbage_can.tscn" id="2_sjg2u"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,3 +10,7 @@
 [node name="GarbageBagSprite" type="Sprite2D" parent="RigidBody2D"]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_bpp3e")
+
+[node name="Garbage_Can" parent="." instance=ExtResource("2_sjg2u")]
+position = Vector2(1033, 539)
+scale = Vector2(0.4, 0.4)

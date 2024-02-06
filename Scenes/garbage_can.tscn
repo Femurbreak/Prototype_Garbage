@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ble5oel4vhttm"]
+
+[ext_resource type="Texture2D" uid="uid://bqxa00ok47eth" path="res://Sprites/Trash Can.png" id="1_1n4ln"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fkdr"]
+size = Vector2(227, 241)
+
+[node name="Garbage_Can" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1n4ln")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-179, -188, -191, -188, -170, 184, -134, 209, -83, 222, -26, 226, 43, 218, 93, 197, 128, 234, 155, 243, 197, 236, 214, 231, 238, 202, 254, 139, 252, 77, 234, 7, 209, -40, 179, -73, 148, -84, 119, -78, 130, -191, 116, -190, 86, 175, -155, 175)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-33.5, 48.5)
+shape = SubResource("RectangleShape2D_6fkdr")
