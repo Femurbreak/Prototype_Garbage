@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6tgio38d1n4c"
-path="res://.godot/imported/Garbage Bag Sprite.png-f60bc1b09a628cc56a57a3625a7b77bb.ctex"
+uid="uid://w7l35xqiqghd"
+path="res://.godot/imported/png-transparent-a-bag-of-garbage-black-bag-bags-thumbnail.png-1063c299e873f3d3f8ae25b260473a54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Garbage Bag Sprite.png"
-dest_files=["res://.godot/imported/Garbage Bag Sprite.png-f60bc1b09a628cc56a57a3625a7b77bb.ctex"]
+source_file="res://Sprites/png-transparent-a-bag-of-garbage-black-bag-bags-thumbnail.png"
+dest_files=["res://.godot/imported/png-transparent-a-bag-of-garbage-black-bag-bags-thumbnail.png-1063c299e873f3d3f8ae25b260473a54.ctex"]
 
 [params]
 
