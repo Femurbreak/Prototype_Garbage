@@ -1,25 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpjkp2tv1wb5e"]
+[gd_scene load_steps=4 format=3 uid="uid://dpjkp2tv1wb5e"]
 
-[ext_resource type="Script" path="res://PhysicsBag.gd" id="1_i776h"]
-[ext_resource type="Texture2D" uid="uid://w7l35xqiqghd" path="res://Sprites/png-transparent-a-bag-of-garbage-black-bag-bags-thumbnail.png" id="1_un108"]
+[ext_resource type="PackedScene" uid="uid://c6x1kxp7gsa0r" path="res://Scenes/garbage_bag.tscn" id="1_82t7c"]
 [ext_resource type="PackedScene" uid="uid://caqpi72umuacn" path="res://Floor.tscn" id="3_hgmhg"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_qmoe3"]
-radius = 27.2029
+[ext_resource type="PackedScene" uid="uid://ble5oel4vhttm" path="res://Scenes/garbage_can.tscn" id="4_1gwma"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(-450, 0)
-linear_damp = 1.0
-script = ExtResource("1_i776h")
-
-[node name="Png-transparent-a-bag-of-garbage-black-bag-bags-thumbnail" type="Sprite2D" parent="RigidBody2D"]
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("1_un108")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource("CircleShape2D_qmoe3")
+[node name="Garbage_Bag" parent="." instance=ExtResource("1_82t7c")]
+position = Vector2(-448, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(0.2, 0.2)
@@ -37,3 +25,6 @@ scale = Vector2(0.8, 0.8)
 [node name="StaticBody2D4" parent="." instance=ExtResource("3_hgmhg")]
 position = Vector2(566, 29)
 rotation = 1.5708
+
+[node name="Garbage_Can" parent="." instance=ExtResource("4_1gwma")]
+position = Vector2(461, 217)

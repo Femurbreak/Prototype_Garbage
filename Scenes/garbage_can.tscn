@@ -1,18 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://ble5oel4vhttm"]
+[gd_scene load_steps=4 format=3 uid="uid://ble5oel4vhttm"]
 
 [ext_resource type="Texture2D" uid="uid://bqxa00ok47eth" path="res://Sprites/Trash Can.png" id="1_1n4ln"]
+[ext_resource type="Script" path="res://Scenes/GarbageBagIn.gd" id="2_sf5dd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6fkdr"]
-size = Vector2(227, 241)
+size = Vector2(227, 117.167)
 
-[node name="Garbage_Can" type="Area2D"]
+[node name="Garbage_Can" type="RigidBody2D"]
+gravity_scale = 0.0
+freeze = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_1n4ln")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.3, 0.3)
 polygon = PackedVector2Array(-179, -188, -191, -188, -170, 184, -134, 209, -83, 222, -26, 226, 43, 218, 93, 197, 128, 234, 155, 243, 197, 236, 214, 231, 238, 202, 254, 139, 252, 77, 234, 7, 209, -40, 179, -73, 148, -84, 119, -78, 130, -191, 116, -190, 86, 175, -155, 175)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-33.5, 48.5)
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_sf5dd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-11, 30.575)
+scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_6fkdr")
+
+[connection signal="body_entered" from="." to="Area2D/CollisionShape2D" method="_on_garbage_can_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

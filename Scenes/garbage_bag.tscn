@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6x1kxp7gsa0r"]
+
+[ext_resource type="Script" path="res://PhysicsBag.gd" id="1_cubiw"]
+[ext_resource type="Texture2D" uid="uid://w7l35xqiqghd" path="res://Sprites/png-transparent-a-bag-of-garbage-black-bag-bags-thumbnail.png" id="2_r2ntm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qmoe3"]
+radius = 27.2029
+
+[node name="Garbage_Bag" type="RigidBody2D"]
+position = Vector2(-450, 0)
+linear_damp = 1.0
+script = ExtResource("1_cubiw")
+
+[node name="Png-transparent-a-bag-of-garbage-black-bag-bags-thumbnail" type="Sprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_r2ntm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qmoe3")
