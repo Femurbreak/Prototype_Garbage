@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpjkp2tv1wb5e"]
+[gd_scene load_steps=5 format=3 uid="uid://dpjkp2tv1wb5e"]
 
 [ext_resource type="PackedScene" uid="uid://c6x1kxp7gsa0r" path="res://Scenes/garbage_bag.tscn" id="1_82t7c"]
 [ext_resource type="PackedScene" uid="uid://caqpi72umuacn" path="res://Floor.tscn" id="3_hgmhg"]
 [ext_resource type="PackedScene" uid="uid://ble5oel4vhttm" path="res://Scenes/garbage_can.tscn" id="4_1gwma"]
+[ext_resource type="Script" path="res://GameManager.gd" id="4_xq614"]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_xq614")
+
 [node name="Garbage_Bag" parent="." instance=ExtResource("1_82t7c")]
-position = Vector2(-448, 0)
+position = Vector2(-448, 274)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(0.2, 0.2)
@@ -27,4 +32,26 @@ position = Vector2(566, 29)
 rotation = 1.5708
 
 [node name="Garbage_Can" parent="." instance=ExtResource("4_1gwma")]
+unique_name_in_owner = true
 position = Vector2(461, 217)
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -551.0
+offset_top = -291.0
+offset_right = -348.0
+offset_bottom = -214.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="PointsLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Points: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
