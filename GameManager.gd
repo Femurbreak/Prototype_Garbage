@@ -2,6 +2,7 @@ extends Node
 
 var points = 0
 var time = 0
+var displayTime = 0
 var timer_on = false
 
 @onready var points_label = %PointsLabel
@@ -24,8 +25,9 @@ func instGarbageBag():
 func _process(delta):
 	if(timer_on == true):
 		time += delta
-		print(time)
-		Timer_Label.text = "Time: " + str(time)
+		# print(time)
+		displayTime = round(time)
+		Timer_Label.text = "Time: " + str(displayTime)
 	if(time >= 10):
 		timer_on = false
 

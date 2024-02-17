@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scenes/GarbageBagIn.gd" id="2_sf5dd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6fkdr"]
-size = Vector2(227, 117.167)
+size = Vector2(146.667, 50.0002)
 
 [node name="Garbage_Can" type="RigidBody2D"]
 gravity_scale = 0.0
@@ -25,7 +25,7 @@ script = ExtResource("2_sf5dd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 unique_name_in_owner = true
-position = Vector2(-11, 30.575)
+position = Vector2(-10, 20.5)
 scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_6fkdr")
 
